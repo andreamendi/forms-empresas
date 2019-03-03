@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="form-empresa">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `form-empresa`
+     * This is a little composer, who works in a form with a any bussness sing up 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class FormEmpresa extends Polymer.Element {
+      static get is() { return 'form-empresa'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'form-empresa'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(FormEmpresa.is, FormEmpresa);
+  </script>
+</dom-module>
